@@ -16,7 +16,8 @@ app.use(express.static('public')) //Directorio Público
 
 
 //Routes
-app.use('/api/usuarios', require('./routes/usuarios'))
+app.use('/api/auth', require('./routes/auth.route'))
+app.use('/api/usuarios', require('./routes/usuarios.route'))
 
 
  

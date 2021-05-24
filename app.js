@@ -18,6 +18,9 @@ app.use(express.static('public')) //Directorio Público
 //Routes
 app.use('/api/auth', require('./routes/auth.route'))
 app.use('/api/usuarios', require('./routes/usuarios.route'))
+app.use('/api/categorias', require('./routes/categorias.route'))
+app.use('/api/productos', require('./routes/productos.route'))
+app.use('/api/buscar', require('./routes/buscar.route'))
 
 
  

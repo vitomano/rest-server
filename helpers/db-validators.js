@@ -47,17 +47,17 @@ const idProdExist = async ( id ) => {
         }
 }
 
-// const catExist = async ( nombre ) => {
+const coleccionesPermitidas = async(coleccion='', colecciones = []) => {
 
-//     const estaCat = await Categoria.findOne({nombre})
+    const incluida = colecciones.includes(coleccion)
 
-//     if (!estaCat) {
-//         throw new Error(`La categoria ${nombre} no existe`)
-//         }
+    if(!incluida){
+        throw new Error(`La coleccion ${coleccion} no es permitida`)
+    }
 
-//     req.categoria = nombre
+    return true
 
-// }
+}
 
 
 module.exports = {
@@ -66,6 +66,7 @@ module.exports = {
     idUserExist,
     idCatExist,
     idProdExist,
+    coleccionesPermitidas
     //catExist
 }
 
